@@ -1,0 +1,17 @@
+{
+  "name": "@easygo-ds-design-tokens",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf build build-dist",
+    "compile": "tsc -p tsconfig.buildscript.json",
+    "build": "rimraf build && pnpm run compile && node build-dist/build.js"
+  },
+  "devDependencies": {
+    "@types/node": "20.12.7",
+    "rimraf": "5.0.5",
+    "style-dictionary": "4.0.0",
+    "typescript": "5.4.5"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "primitives": {
+    "opacity": {
+      "$description": "Opacity primitives used across the system.",
+      "disabled": { "$type": "opacity", "$value": "0.38" },
+      "subtle": { "$type": "opacity", "$value": "0.6" },
+      "default": { "$type": "opacity", "$value": "1" }
+    }
+  }
+}

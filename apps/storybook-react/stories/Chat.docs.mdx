@@ -1,0 +1,213 @@
+import { Meta, Canvas } from "@storybook/blocks";
+import * as ChatStories from "./KickChat.stories";
+
+<Meta title="Kick/Chat/Docs" />
+
+# Kick Chat Component
+
+A composable chat container built for Kick's streaming platform. The component uses a dark neutral theme with Kick's signature green accent colors.
+
+## Preview
+
+<Canvas of={ChatStories.Default} />
+
+## Component Structure
+
+The Chat component follows a compound component pattern:
+
+<table>
+  <thead>
+    <tr>
+      <th>Section</th>
+      <th>Purpose</th>
+      <th>Tailwind Class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>Chat</code>
+      </td>
+      <td>Root container with shadow and border</td>
+      <td>
+        <code>bg-chat-body</code> <code>shadow-chat</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>Chat.Header</code>
+      </td>
+      <td>Title bar with controls</td>
+      <td>
+        <code>bg-chat-header</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>Chat.Body</code>
+      </td>
+      <td>Scrollable message area</td>
+      <td>
+        <code>bg-chat-body</code> <code>overflow-y-auto</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>Chat.Footer</code>
+      </td>
+      <td>Input and actions</td>
+      <td>
+        <code>bg-chat-footer</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Token Architecture
+
+Chat tokens follow the **primitives → semantics → products** pattern:
+
+<table>
+  <thead>
+    <tr>
+      <th>Semantic Token</th>
+      <th>Kick Product Override</th>
+      <th>Primitive Reference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>chat.bg.header</code>
+      </td>
+      <td>
+        <code>#0f0f0f</code>
+      </td>
+      <td>
+        <code>{"primitives.neutral.950"}</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>chat.bg.body</code>
+      </td>
+      <td>
+        <code>#141414</code>
+      </td>
+      <td>
+        <code>{"primitives.neutral.925"}</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>chat.bg.footer</code>
+      </td>
+      <td>
+        <code>#0f0f0f</code>
+      </td>
+      <td>
+        <code>{"primitives.neutral.950"}</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>chat.bg.input</code>
+      </td>
+      <td>
+        <code>#1a1a1a</code>
+      </td>
+      <td>
+        <code>{"primitives.neutral.900"}</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>chat.bg.message</code>
+      </td>
+      <td>
+        <code>#1f1f1f</code>
+      </td>
+      <td>
+        <code>{"primitives.neutral.850"}</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>chat.border.default</code>
+      </td>
+      <td>
+        <code>#2a2a2a</code>
+      </td>
+      <td>
+        <code>{"primitives.neutral.800"}</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>chat.border.input</code>
+      </td>
+      <td>
+        <code>#3a3a3a</code>
+      </td>
+      <td>
+        <code>{"primitives.neutral.750"}</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>chat.text.default</code>
+      </td>
+      <td>
+        <code>#ffffff</code>
+      </td>
+      <td>
+        <code>{"primitives.white"}</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>chat.text.faint</code>
+      </td>
+      <td>
+        <code>#737373</code>
+      </td>
+      <td>
+        <code>{"primitives.neutral.500"}</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Brand-Specific Shadow
+
+Kick's chat has a distinctive green glow:
+
+```
+shadow-chat: 0 0 60px rgba(83, 252, 24, 0.15), 0 25px 50px -12px rgba(0, 0, 0, 0.5)
+```
+
+## Usage
+
+```tsx
+import { Chat } from "@easygo-ds-kick-chat";
+import { Button } from "@easygo-ds-kick-button";
+
+<Chat>
+  <Chat.Header>
+    <span className="h-2 w-2 rounded-full bg-button-primary" />
+    <span>Live Chat</span>
+  </Chat.Header>
+  <Chat.Body>
+    {messages.map((msg) => (
+      <div className="bg-chat-message rounded-lg px-3 py-2">
+        <span className="text-button-primary">{msg.username}</span>
+        <p>{msg.message}</p>
+      </div>
+    ))}
+  </Chat.Body>
+  <Chat.Footer>
+    <input className="bg-chat-input" placeholder="Send a message..." />
+    <Button size="sm">Chat</Button>
+  </Chat.Footer>
+</Chat>;
+```

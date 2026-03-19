@@ -1,0 +1,11 @@
+{
+  "core": {
+    "dimension": {
+      "base": {
+        "$type": "dimension",
+        "$value": "0.2rem",
+        "$description": "Base spacing step. Brands can override this value."
+      }
+    }
+  }
+}

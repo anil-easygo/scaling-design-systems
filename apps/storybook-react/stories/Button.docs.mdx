@@ -1,0 +1,27 @@
+import { Meta, Canvas, Controls } from "@storybook/blocks";
+import { Button } from "@easygo-ds-kick-button";
+import * as ButtonStories from "./KickButton.stories";
+
+<Meta title="Kick/Button/Docs" component={Button} />
+
+# Kick Button API
+
+Kick ships the same conceptual API as the Stake button. The React flavor accepts `className` while the
+Svelte package forwards the `class` attribute.
+
+## Props
+
+<Controls of={ButtonStories.Playground} />
+
+## State Examples
+
+<Canvas of={ButtonStories.Loading} />
+<Canvas of={ButtonStories.Disabled} />
+
+## Sizes
+
+<Canvas of={ButtonStories.Sizes} />
+
+> Swap the imported tokens file in `.storybook/preview.ts` to
+> `@easygo-ds-design-tokens/build/stake/tokens.css` to preview the Stake theme while keeping this exact
+> story code.

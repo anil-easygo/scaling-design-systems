@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "types": ["svelte", "vite/client"],
+    "baseUrl": "."
+  },
+  "include": [".storybook", "stories", "src", "svelte.config.js"],
+  "exclude": ["node_modules", "dist"]
+}

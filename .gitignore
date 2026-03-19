@@ -1,0 +1,5 @@
+node_modules
+.DS_Store
+storybook-static
+packages/@easygo-ds-design-tokens/build
+packages/@easygo-ds-design-tokens/build-dist

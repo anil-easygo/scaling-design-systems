@@ -1,0 +1,50 @@
+{
+  "semantic": {
+    "color": {
+      "action": {
+        "primary": { "$value": "#53fc18" },
+        "primaryHover": { "$value": "#47e015" }
+      },
+      "text": {
+        "onPrimary": { "$value": "{primitives.neutral.975}" }
+      },
+      "surface": {
+        "disabled": { "$value": "{primitives.green.100}" }
+      },
+      "button": {
+        "border": {
+          "default": { "$value": "transparent" }
+        }
+      },
+      "chat": {
+        "bg": {
+          "header": { "$value": "{primitives.neutral.950}" },
+          "body": { "$value": "{primitives.neutral.925}" },
+          "footer": { "$value": "{primitives.neutral.950}" },
+          "input": { "$value": "{primitives.neutral.900}" },
+          "message": { "$value": "{primitives.neutral.850}" }
+        },
+        "border": {
+          "default": { "$value": "{primitives.neutral.800}" },
+          "input": { "$value": "{primitives.neutral.750}" }
+        },
+        "text": {
+          "default": { "$value": "{primitives.white}" },
+          "faint": { "$value": "{primitives.neutral.500}" }
+        }
+      }
+    },
+    "shadow": {
+      "chat": {
+        "$value": "0 0 60px rgba(83, 252, 24, 0.15), 0 25px 50px -12px rgba(0, 0, 0, 0.5)"
+      }
+    },
+    "typography": {
+      "button": {
+        "fontFamily": {
+          "$value": "{primitives.typography.fontFamily.alternative}"
+        }
+      }
+    }
+  }
+}

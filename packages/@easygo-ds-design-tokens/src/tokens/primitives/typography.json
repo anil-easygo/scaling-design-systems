@@ -1,0 +1,64 @@
+{
+  "primitives": {
+    "typography": {
+      "fontFamily": {
+        "default": {
+          "$type": "fontFamily",
+          "$value": "'proxima-nova', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        },
+        "alternative": {
+          "$type": "fontFamily",
+          "$value": "'Inter', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        }
+      },
+      "weight": {
+        "default": {
+          "$type": "fontWeight",
+          "$tailwindOptions": { "namespace": "font" },
+          "$value": "400"
+        },
+        "thick": {
+          "$type": "fontWeight",
+          "$tailwindOptions": { "namespace": "font" },
+          "$value": "600"
+        },
+        "heavy": {
+          "$type": "fontWeight",
+          "$tailwindOptions": { "namespace": "font" },
+          "$value": "700"
+        }
+      },
+      "fontSize": {
+        "xs": { "$type": "fontSize", "$value": "0.75rem" },
+        "sm": { "$type": "fontSize", "$value": "0.875rem" },
+        "md": { "$type": "fontSize", "$value": "1rem" },
+        "lg": { "$type": "fontSize", "$value": "1.125rem" },
+        "xl": { "$type": "fontSize", "$value": "1.25rem" },
+        "2xl": { "$type": "fontSize", "$value": "1.5rem" },
+        "3xl": { "$type": "fontSize", "$value": "1.875rem" },
+        "4xl": { "$type": "fontSize", "$value": "2.25rem" }
+      },
+      "lineHeight": {
+        "xs": { "$type": "lineHeight", "$value": "1" },
+        "sm": { "$type": "lineHeight", "$value": "1.25rem" },
+        "md": { "$type": "lineHeight", "$value": "1.5rem" },
+        "lg": { "$type": "lineHeight", "$value": "1.75rem" },
+        "xl": { "$type": "lineHeight", "$value": "2rem" },
+        "2xl": { "$type": "lineHeight", "$value": "2.25rem" },
+        "3xl": { "$type": "lineHeight", "$value": "2.55rem" }
+      },
+      "feature": {
+        "settings": {
+          "$type": "fontFeatureSettings",
+          "$value": "'salt' on"
+        }
+      },
+      "variant": {
+        "numeric": {
+          "$type": "fontVariantNumeric",
+          "$value": "lining-nums tabular-nums"
+        }
+      }
+    }
+  }
+}

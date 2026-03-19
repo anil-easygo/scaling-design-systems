@@ -1,0 +1,26 @@
+import { Meta, Canvas, Controls } from "@storybook/blocks";
+import StakeButtonStory from "../src/examples/StakeButtonStory.svelte";
+import * as ButtonStories from "./StakeButton.stories";
+
+<Meta title="Stake/Button/Docs" component={StakeButtonStory} />
+
+# Stake Button API
+
+Stake mirrors the Kick API. The Svelte component forwards the native `class` attribute, while the React button uses
+`className`.
+
+## Props
+
+<Controls of={ButtonStories.Playground} />
+
+## Disabled & Loading
+
+<Canvas of={ButtonStories.Disabled} />
+<Canvas of={ButtonStories.Loading} />
+
+## Sizes
+
+<Canvas of={ButtonStories.Sizes} />
+
+> Importing `@easygo-ds-design-tokens/build/kick/tokens.css` instead of the Stake bundle instantly swaps this Storybook to
+> Kick values without touching the component code.

@@ -1,0 +1,27 @@
+{
+  "semantic": {
+    "radius": {
+      "$description": "Semantic border radius tokens for components. Change these to affect all products.",
+      "button": {
+        "$type": "dimension",
+        "$value": "{core.radius.md}",
+        "$description": "Border radius for buttons. Override in products for brand-specific values."
+      },
+      "chat": {
+        "$type": "dimension",
+        "$value": "{core.radius.lg}",
+        "$description": "Border radius for chat containers. Override in products for brand-specific values."
+      },
+      "input": {
+        "$type": "dimension",
+        "$value": "{core.radius.sm}",
+        "$description": "Border radius for input fields."
+      },
+      "message": {
+        "$type": "dimension",
+        "$value": "{core.radius.sm}",
+        "$description": "Border radius for chat messages."
+      }
+    }
+  }
+}

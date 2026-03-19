@@ -1,0 +1,134 @@
+{
+  "semantic": {
+    "color": {
+      "action": {
+        "$description": "Action colors - base semantic values that products can override",
+        "primary": {
+          "$type": "color",
+          "$value": "{primitives.blue.600}"
+        },
+        "primaryHover": {
+          "$type": "color",
+          "$value": "{primitives.blue.700}"
+        }
+      },
+      "surface": {
+        "$description": "Surface colors for backgrounds",
+        "base": {
+          "$type": "color",
+          "$value": "{primitives.white}"
+        },
+        "raised": {
+          "$type": "color",
+          "$value": "{primitives.accent-rock.50}"
+        },
+        "muted": {
+          "$type": "color",
+          "$value": "{primitives.accent-rock.100}"
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{primitives.accent-rock.200}"
+        }
+      },
+      "text": {
+        "$description": "Text colors",
+        "default": {
+          "$type": "color",
+          "$value": "{primitives.accent-rock.900}"
+        },
+        "onPrimary": {
+          "$type": "color",
+          "$value": "{primitives.white}"
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{primitives.accent-rock.400}"
+        }
+      },
+      "border": {
+        "$description": "Border colors",
+        "default": {
+          "$type": "color",
+          "$value": "{primitives.accent-rock.300}"
+        }
+      },
+      "button": {
+        "bg": {
+          "primary": {
+            "$type": "color",
+            "$value": "{semantic.color.action.primary}"
+          },
+          "primaryHover": {
+            "$type": "color",
+            "$value": "{semantic.color.action.primaryHover}"
+          },
+          "disabled": {
+            "$type": "color",
+            "$value": "{semantic.color.surface.disabled}"
+          }
+        },
+        "text": {
+          "onPrimary": {
+            "$type": "color",
+            "$value": "{semantic.color.text.onPrimary}"
+          },
+          "disabled": {
+            "$type": "color",
+            "$value": "{semantic.color.text.disabled}"
+          }
+        },
+        "border": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.color.action.primary}"
+          }
+        }
+      },
+      "chat": {
+        "bg": {
+          "header": {
+            "$type": "color",
+            "$value": "{semantic.color.surface.raised}"
+          },
+          "body": {
+            "$type": "color",
+            "$value": "{semantic.color.surface.base}"
+          },
+          "footer": {
+            "$type": "color",
+            "$value": "{semantic.color.surface.muted}"
+          },
+          "input": {
+            "$type": "color",
+            "$value": "{semantic.color.surface.base}"
+          },
+          "message": {
+            "$type": "color",
+            "$value": "{semantic.color.surface.raised}"
+          }
+        },
+        "border": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.color.border.default}"
+          },
+          "input": {
+            "$type": "color",
+            "$value": "{semantic.color.border.default}"
+          }
+        },
+        "text": {
+          "default": {
+            "$type": "color",
+            "$value": "{semantic.color.text.default}"
+          },
+          "faint": {
+            "$type": "color",
+            "$value": "{semantic.color.text.disabled}"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "types": ["vite/client", "storybook__react"],
+    "paths": {
+      "@easygo-ds-kick-button": ["../../packages/components/@easygo-ds-kick-button/src"],
+      "@easygo-ds-stake-button": ["../../packages/components/@easygo-ds-stake-button/src"]
+    }
+  },
+  "include": [".storybook", "stories", "src"]
+}

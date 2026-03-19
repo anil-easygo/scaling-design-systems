@@ -1,0 +1,11 @@
+{
+  "name": "easygo-ds",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.15.6",
+  "scripts": {
+    "build": "pnpm --filter @easygo-ds-design-tokens build && pnpm --filter @easygo-ds-tailwind-preset build && pnpm --filter @easygo-ds-kick-button build && pnpm --filter @easygo-ds-stake-button build && pnpm --filter @easygo-ds-kick-chat build && pnpm --filter @easygo-ds-stake-chat build && pnpm --filter @easygo-ds-storybook-react build && pnpm --filter @easygo-ds-storybook-svelte build",
+    "dev:sb:react": "pnpm --filter @easygo-ds-design-tokens build && pnpm --filter @easygo-ds-storybook-react dev",
+    "dev:sb:svelte": "pnpm --filter @easygo-ds-design-tokens build && pnpm --filter @easygo-ds-storybook-svelte dev"
+  }
+}

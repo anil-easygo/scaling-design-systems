@@ -1,0 +1,43 @@
+{
+  "semantic": {
+    "color": {
+      "action": {
+        "primary": { "$value": "{primitives.blue.650}" },
+        "primaryHover": { "$value": "{primitives.blue.700}" }
+      },
+      "text": {
+        "onPrimary": { "$value": "{primitives.white}" }
+      },
+      "surface": {
+        "disabled": { "$value": "{primitives.blue.100}" }
+      },
+      "button": {
+        "border": {
+          "default": { "$value": "{primitives.blue.650}" }
+        }
+      },
+      "chat": {
+        "bg": {
+          "header": { "$value": "{primitives.slate.900}" },
+          "body": { "$value": "{primitives.slate.900}" },
+          "footer": { "$value": "{primitives.slate.900}" },
+          "input": { "$value": "{primitives.slate.800}" },
+          "message": { "$value": "{primitives.slate.800}" }
+        },
+        "border": {
+          "default": { "$value": "{primitives.slate.700}" },
+          "input": { "$value": "{primitives.slate.650}" }
+        },
+        "text": {
+          "default": { "$value": "{primitives.white}" },
+          "faint": { "$value": "{primitives.slate.400}" }
+        }
+      }
+    },
+    "shadow": {
+      "chat": {
+        "$value": "0 0 60px rgba(20, 117, 225, 0.1), 0 25px 50px -12px rgba(0, 0, 0, 0.4)"
+      }
+    }
+  }
+}

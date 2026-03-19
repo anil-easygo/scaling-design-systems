@@ -1,0 +1,15 @@
+{
+  "core": {
+    "size": {
+      "$description": "Primitive size scale derived from --dimension.",
+      "xs": { "$type": "dimension", "$value": "calc(var(--dimension) * 2)" },
+      "sm": { "$type": "dimension", "$value": "calc(var(--dimension) * 4)" },
+      "md": { "$type": "dimension", "$value": "calc(var(--dimension) * 6)" },
+      "lg": { "$type": "dimension", "$value": "calc(var(--dimension) * 8)" },
+      "xl": { "$type": "dimension", "$value": "calc(var(--dimension) * 10)" },
+      "2xl": { "$type": "dimension", "$value": "calc(var(--dimension) * 12)" },
+      "3xl": { "$type": "dimension", "$value": "calc(var(--dimension) * 14)" },
+      "4xl": { "$type": "dimension", "$value": "calc(var(--dimension) * 18)" }
+    }
+  }
+}

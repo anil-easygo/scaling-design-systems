@@ -1,0 +1,6 @@
+{
+  "dimension": {
+    "$type": "dimension",
+    "$value": "var(--core-dimension-base)"
+  }
+}

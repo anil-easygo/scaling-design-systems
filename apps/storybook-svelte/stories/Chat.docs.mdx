@@ -1,0 +1,217 @@
+import { Meta, Canvas } from "@storybook/blocks";
+import * as ChatStories from "./StakeChat.stories";
+
+<Meta title="Stake/Chat/Docs" />
+
+# Stake Chat Component
+
+A composable chat container built for Stake's support and concierge features. The component uses a dark slate theme with Stake's blue accent colors.
+
+## Preview
+
+<Canvas of={ChatStories.Default} />
+
+## Component Structure
+
+The Chat component uses separate Svelte components:
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Purpose</th>
+      <th>Tailwind Class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>Chat</code>
+      </td>
+      <td>Root container with shadow and border</td>
+      <td>
+        <code>bg-chat-body</code> <code>shadow-chat</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>ChatHeader</code>
+      </td>
+      <td>Title bar with language selector</td>
+      <td>
+        <code>bg-chat-header</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>ChatBody</code>
+      </td>
+      <td>Scrollable message area</td>
+      <td>
+        <code>bg-chat-body</code> <code>overflow-y-auto</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>ChatFooter</code>
+      </td>
+      <td>Input and online status</td>
+      <td>
+        <code>bg-chat-footer</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Token Architecture
+
+Chat tokens follow the **primitives → semantics → products** pattern:
+
+<table>
+  <thead>
+    <tr>
+      <th>Semantic Token</th>
+      <th>Stake Product Override</th>
+      <th>Primitive Reference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>chat.bg.header</code>
+      </td>
+      <td>
+        <code>#13232d</code>
+      </td>
+      <td>
+        <code>{"primitives.slate.900"}</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>chat.bg.body</code>
+      </td>
+      <td>
+        <code>#13232d</code>
+      </td>
+      <td>
+        <code>{"primitives.slate.900"}</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>chat.bg.footer</code>
+      </td>
+      <td>
+        <code>#13232d</code>
+      </td>
+      <td>
+        <code>{"primitives.slate.900"}</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>chat.bg.input</code>
+      </td>
+      <td>
+        <code>#1a2e39</code>
+      </td>
+      <td>
+        <code>{"primitives.slate.800"}</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>chat.bg.message</code>
+      </td>
+      <td>
+        <code>#1a2e39</code>
+      </td>
+      <td>
+        <code>{"primitives.slate.800"}</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>chat.border.default</code>
+      </td>
+      <td>
+        <code>#203743</code>
+      </td>
+      <td>
+        <code>{"primitives.slate.700"}</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>chat.border.input</code>
+      </td>
+      <td>
+        <code>#273f4c</code>
+      </td>
+      <td>
+        <code>{"primitives.slate.650"}</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>chat.text.default</code>
+      </td>
+      <td>
+        <code>#ffffff</code>
+      </td>
+      <td>
+        <code>{"primitives.white"}</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>chat.text.faint</code>
+      </td>
+      <td>
+        <code>#83a3b6</code>
+      </td>
+      <td>
+        <code>{"primitives.slate.400"}</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Brand-Specific Shadow
+
+Stake's chat has a subtle blue glow:
+
+```
+shadow-chat: 0 0 60px rgba(20, 117, 225, 0.1), 0 25px 50px -12px rgba(0, 0, 0, 0.4)
+```
+
+## Usage
+
+```svelte
+<script>
+  import { Chat, ChatHeader, ChatBody, ChatFooter } from "@easygo-ds-stake-chat";
+  import { Button } from "@easygo-ds-stake-button";
+</script>
+
+<Chat>
+  <ChatHeader>
+    <select class="bg-chat-input">
+      <option>🇺🇸 English</option>
+      <option>🇪🇸 Spanish</option>
+    </select>
+  </ChatHeader>
+  <ChatBody>
+    {#each messages as msg}
+      <div class="bg-chat-message rounded-lg px-3 py-2">
+        <span class="text-button-primary">{msg.username}</span>
+        <p>{msg.message}</p>
+      </div>
+    {/each}
+  </ChatBody>
+  <ChatFooter>
+    <input class="bg-chat-input" placeholder="Send a message..." />
+    <Button size="sm">Send</Button>
+  </ChatFooter>
+</Chat>
+```

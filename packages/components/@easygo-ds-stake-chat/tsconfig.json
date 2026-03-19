@@ -1,0 +1,12 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "allowJs": true,
+    "types": ["svelte"],
+    "checkJs": false
+  },
+  "include": ["src/**/*", "svelte.config.js", "tsconfig.json"],
+  "exclude": ["dist", "node_modules"]
+}

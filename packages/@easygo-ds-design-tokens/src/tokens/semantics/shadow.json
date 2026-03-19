@@ -1,0 +1,11 @@
+{
+  "semantic": {
+    "shadow": {
+      "$description": "Shadow tokens for elevated surfaces",
+      "chat": {
+        "$type": "shadow",
+        "$value": "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "core": {
+    "radius": {
+      "none": { "$value": "0rem" },
+      "sm": { "$value": "0.25rem" },
+      "md": { "$value": "0.5rem" },
+      "lg": { "$value": "1rem" },
+      "full": { "$value": "9999px" }
+    }
+  }
+}

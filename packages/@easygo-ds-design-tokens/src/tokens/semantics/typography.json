@@ -1,0 +1,24 @@
+{
+  "semantic": {
+    "typography": {
+      "button": {
+        "fontFamily": {
+          "$type": "fontFamily",
+          "$value": "{primitives.typography.fontFamily.default}"
+        },
+        "fontSize": {
+          "$type": "fontSize",
+          "$value": "{primitives.typography.fontSize.md}"
+        },
+        "fontWeight": {
+          "$type": "fontWeight",
+          "$value": "{primitives.typography.weight.thick}"
+        },
+        "lineHeight": {
+          "$type": "lineHeight",
+          "$value": "{primitives.typography.lineHeight.md}"
+        }
+      }
+    }
+  }
+}

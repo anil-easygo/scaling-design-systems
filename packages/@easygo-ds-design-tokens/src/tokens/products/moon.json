@@ -1,0 +1,21 @@
+{
+  "core": {
+    "radius": {
+      "md": { "$value": "0.5rem" }
+    }
+  },
+  "semantic": {
+    "color": {
+      "action": {
+        "primary": { "$value": "{primitives.accent-orchid.600}" },
+        "primaryHover": { "$value": "{primitives.accent-orchid.700}" }
+      },
+      "surface": {
+        "disabled": { "$value": "{primitives.accent-orchid.100}" }
+      },
+      "text": {
+        "disabled": { "$value": "{primitives.accent-orchid.500}" }
+      }
+    }
+  }
+}
